@@ -304,14 +304,40 @@ function probelmEight(){
 let numberEight = probelmEight()
 console.log(numberEight)
 
-//9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
+//9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name.
+// Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
+function problemNine(){
+    let appended = dishes.map(function(el){
+        return el.cuisine + ' ' + el.name
+    })
+    return appended
+}
+
+let numberNine = problemNine()
+console.log(numberNine)
 
 
+//10. Create a function that will use advanced array methods on the 'dishes' array and return the result
+//["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+function problemTen(){
 
-//10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+let results = dishes.filter(function(el){
+    if(el.cuisine.includes("Vegetarian")){
+        return el.cuisine + ' ' + el.name;
+        
+    }
+    else{
+        return false;
+    }
+    
+    
+})
 
-
+return results;
+}
+let numberTen = problemTen();
+console.log(numberTen)
 
 
 
